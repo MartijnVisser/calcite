@@ -52,7 +52,7 @@ jobs:
     name: 'Windows (JDK 8)'
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         fetch-depth: 50
     - name: 'Set up JDK 8'
@@ -104,7 +104,7 @@ jobs:
         properties: |
           calcite.avatica.version=1.0.0-dev-main
           skipJavadoc=
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         fetch-depth: 50
     - uses: burrunan/gradle-cache-action@v1
@@ -126,7 +126,7 @@ jobs:
     name: 'Linux (OpenJ9 8)'
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 50
       - uses: AdoptOpenJDK/install-jdk@v1
@@ -159,7 +159,7 @@ jobs:
     name: 'macOS (JDK 18)'
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 50
       - name: 'Set up JDK 18'
@@ -190,7 +190,7 @@ jobs:
     name: 'Error Prone (JDK 11)'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 50
       - name: 'Set up JDK 11'
@@ -211,7 +211,7 @@ jobs:
     name: 'CheckerFramework (JDK 11)'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 50
       - name: 'Set up JDK 11'
@@ -235,7 +235,7 @@ jobs:
     name: 'Linux (JDK 8) Slow Tests'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 50
       - name: 'Set up JDK 8'
@@ -282,7 +282,7 @@ jobs:
     - name: 'Index Foodmart/Wikipedia datasets'
       working-directory: ./druid-dataset
       run: ./index.sh 30s
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         fetch-depth: 1
         path: calcite
