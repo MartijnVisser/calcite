@@ -38,7 +38,7 @@ pluginManagement {
         idv("org.jetbrains.gradle.plugin.idea-ext")
         idv("org.nosphere.apache.rat")
         idv("org.owasp.dependencycheck")
-        kotlin("jvm") version "kotlin".v()
+        kotlin("jvm") version "1.7.21".v()
     }
     if (extra.has("enableMavenLocal") && extra["enableMavenLocal"].toString().ifBlank { "true" }.toBoolean()) {
         repositories {
