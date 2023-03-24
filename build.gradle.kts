@@ -557,7 +557,7 @@ allprojects {
         if (enableSpotBugs) {
             apply(plugin = "com.github.spotbugs")
             spotbugs {
-                toolVersion = "spotbugs".v
+                toolVersion = "4.7.3".v
                 reportLevel = "high"
                 //  excludeFilter = file("$rootDir/src/main/config/spotbugs/spotbugs-filter.xml")
                 // By default spotbugs verifies TEST classes as well, and we do not want that
