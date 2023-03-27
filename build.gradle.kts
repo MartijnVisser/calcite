@@ -373,7 +373,7 @@ allprojects {
         // This will be config_loc in Checkstyle (checker.xml)
         val configLoc = File(rootDir, "src/main/config/checkstyle")
         checkstyle {
-            toolVersion = "checkstyle".v
+            toolVersion = "10.9.3".v
             isShowViolations = true
             configDirectory.set(configLoc)
             configFile = configDirectory.get().file("checker.xml").asFile
